@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'songmeanings'
+require 'pry'
 
 module Ipsum
 
