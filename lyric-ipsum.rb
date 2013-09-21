@@ -11,6 +11,8 @@ end
 
 post '/' do
   @band = Ipsum::Band.new(params['band'])
+  @song = Ipsum::Song.new(params['song'])
+
 
   erb :result
 end
