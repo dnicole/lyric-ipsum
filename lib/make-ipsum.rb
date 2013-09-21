@@ -1,18 +1,23 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'songmeanings'
-require 'pry'
-require 'unirest'
+# require 'pry'
 require 'lyricfy'
 
 module Ipsum
   fetcher = Lyricfy::Fetcher.new
 
-  class Lyric
+  class Song
     def initialize(artist, song)
       @song = fetcher.search(artist, song)
     end
-  end 
+
+    def lyrics
+      @song.lines.sample
+    end
+  end
+
+  # class 
+  # end 
 end
 
 # fetcher = Lyricfy::Fetcher.new
