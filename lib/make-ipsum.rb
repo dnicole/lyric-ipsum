@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-# require 'pry'
+require 'pry'
 require 'lyricfy'
 
 module Ipsum
@@ -8,11 +8,11 @@ module Ipsum
 
   class Song
     def initialize(artist, song)
-      @song = fetcher.search(artist, song)
+      fetcher.search(artist, song)
     end
 
     def lyrics
-      @song.lines.sample
+      self.lines.sample
     end
   end
 
