@@ -1,0 +1,1 @@
+web: bundle exec ruby lyric-ipsum.rb -p $PORT
