@@ -1,15 +1,24 @@
-<link rel="stylesheet" href="application.css" type="text/css" />
-<h1>we make internets. and so do you.</h1>
+<!doctype html>
+<html>
+<head>
+    <title>Lyric Ipsum!</title>
+    <link rel="stylesheet" href="application.css" type="text/css">
+</head>
 
-<form class="" action="/songmeanings" method="POST">
-  Enter a band: <input type="text" name="band">
-  <br>
-  And enter an album: <input type="text"  name="enter">
+<body>
+    <h1>we make internets. and so do you.</h1>
 
-  How many paragraphs do you need?
-  <input type="radio" name="1para" value="1">1<br>
-  <input type="radio" name="2para" value="2">2<br>
-  <input type="radio" name="3para" value="3">3<br>
-  <input type="radio" name="4para" value="4">4<br>
-  <input type="submit">
-</form>
+    <form class="" action="/songmeanings" method="POST">
+        <label for="band">Enter a band: </label>
+        <input type="text" name="band" id="band">
+        <br>
+        <label for="album">And enter an album: </label>
+        <input type="text" name="album" id="album">
+        <br>
+        <label for="paragraphs">How many paragraphs do you need?</label>
+        <input type="number" name="paragraphs" id="paragraphs">
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
