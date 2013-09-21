@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'songmeanings'
 require 'pry'
+require 'unirest'
 
 module Ipsum
 
