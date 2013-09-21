@@ -6,25 +6,15 @@ require 'unirest'
 require 'lyricfy'
 
 module Ipsum
+  fetcher = Lyricfy::Fetcher.new
 
-class Band
-  attr_reader :fetcher
-
-  def initialize("band")
-    @fetcher = Lyricfy::Fetcher.new
-  end
+  class Lyric
+    def initialize(artist, song)
+      @song = fetcher.search(artist, song)
+    end
+  end 
 end
 
-class Song
-  attr_reader :song
-
-  def initialize
-    @song = Band.fetcher.search
-  end
-end
-
-end
-
-fetcher = Lyricfy::Fetcher.new
-song = fetcher.search 'Coldplay', 'Viva la vida'
-puts song.body # prints lyrics separated by '\n'
+# fetcher = Lyricfy::Fetcher.new
+# song = fetcher.search 'Artist', 'Song'
+# puts song.body # prints lyrics separated by '\n'
