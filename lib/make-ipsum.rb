@@ -4,10 +4,10 @@ require 'pry'
 require 'lyricfy'
 
 module Ipsum
-  fetcher = Lyricfy::Fetcher.new
 
   class Song
     def initialize(artist, song)
+      fetcher = Lyricfy::Fetcher.new
       fetcher.search(artist, song)
     end
 

@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader'
-require 'make-ipsum.rb'
+require_relative 'lib/make-ipsum.rb'
 
 get '/' do
   "Hello World"
@@ -10,9 +10,8 @@ get '/' do
   erb :hello
 end
 
-post '/' do
-  @band = Ipsum::Band.new(params['band'])
-  @song = Ipsum::Song.new(params['song'])
+post '/result' do
+  @result = Ipsum::Song.new(params[:artist], params[:song]).lyrics(params["paragraphs"])
 
 
   erb :result
