@@ -12,7 +12,9 @@ header {
 }
 
 img {
-    margin-left: 470px;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 h1 {
