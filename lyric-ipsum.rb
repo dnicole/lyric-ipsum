@@ -19,5 +19,7 @@ post '/result' do
 
   @result = @result.join(".<br><br>")
 
+  # @no_song = "test"
+
   erb :result
 end

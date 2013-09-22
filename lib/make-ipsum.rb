@@ -9,6 +9,10 @@ module Ipsum
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
       @new_song = fetcher.search(artist, song)
+      if @new_song == nil
+        @new_song = fetcher.search("Rick Astley", "Never Gonna Give You Up")
+        @no_song = true
+      end
     end
 
     # def lines
