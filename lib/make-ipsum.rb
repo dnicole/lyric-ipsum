@@ -15,8 +15,8 @@ module Ipsum
     #   self["lines"]
     # end
 
-    def lyrics
-      @new_song.lines.sample(2).join(". ")
+    def lyrics(paragraphs)
+      @new_song.lines.sample(paragraphs.to_i).join(". ")
     end
   end
 
