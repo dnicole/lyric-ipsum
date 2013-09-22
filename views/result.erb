@@ -8,11 +8,9 @@
 <body>
     <h1>Here:</h1>
 
-    <!--<h2><%= @no_song %></h2>-->
-
     <div class="result">
-    	<% if @no_song? %>
-		  <h4 class="error">We're not as cool as you; we don't have that song. Or maybe you just can't spell. Anyway, here's some ipsum text:</h4>
+    	<% if @no_song %>
+			  <h4 class="error">We're not as cool as you; we don't have that song. Or maybe you just can't spell. Anyway, here's some ipsum text:</h4>
 			<% end %>
       <p><%= @result %>.</p>
     </div>

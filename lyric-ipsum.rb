@@ -14,12 +14,12 @@ post '/result' do
   @result = []
 
   params[:paragraphs].to_i.times do
-    @result << Ipsum::Song.new(params[:artist], params[:song]).lyrics
+    @new_song = Ipsum::Song.new(params[:artist], params[:song])
+    @no_song = true if @new_song.no_song?
+    @result << @new_song.lyrics
   end
 
   @result = @result.join(".<br><br>")
-
-  # @no_song = "test"
 
   erb :result
 end
