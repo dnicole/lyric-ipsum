@@ -34,14 +34,14 @@ describe Ipsum::Song do
     end
   end
 
-  describe '#add_latin' do
-    it 'adds lorem text from LATIN to match song lyrics' do
-      song = double("song")
-      song.stub(:lines).and_return(['lyrics'])
-      Lyricfy::Fetcher.stub_chain(:new, :search).and_return(song)
+  # describe '#add_latin' do
+  #   it 'adds lorem text from LATIN to match song lyrics' do
+  #     song = double("song")
+  #     song.stub(:lines).and_return(['lyrics'])
+  #     Lyricfy::Fetcher.stub_chain(:new, :search).and_return(song)
 
-      expect(song.add_latin)
+  #     expect(song.add_latin).to 
 
-    end
-  end
+  #   end
+  # end
 end 
