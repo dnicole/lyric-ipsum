@@ -9,7 +9,10 @@
     <h1>voilà!:</h1>
 
     <div class="result">
-        <p>Your Ipsum: <%= @result %></p>
+    	<% if @no_song %>
+			  <h4 class="error">We're not as cool as you; we don't have that song. Or maybe you just can't spell. Anyway, here's some ipsum text:</h4>
+			<% end %>
+      <p><%= @result %>.</p>
     </div>
 </body>
 </html>
