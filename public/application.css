@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+    background: url(stitched_wool.png);
+}
 	font-family: 'Open Sans', Verdana, Tahoma;
     background-color: #F5F5F5;
 }
@@ -17,6 +19,10 @@ img {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: #49A3A3;
     font-family: Nexa Light;
@@ -30,6 +36,11 @@ h2 {
     font-family: carton;
     margin-top: 70px;
     text-align: center;
+}
+
+h4 {
+    color: #ED694C;
+    font-family: carton;
 }
 
 form {
@@ -55,5 +66,7 @@ input[type="submit"] {
 }
 
 .result {
+    font-family: Avenir;
+    font-weight: bold;
     text-align: center;
 }
