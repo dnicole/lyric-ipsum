@@ -2,17 +2,41 @@
 
 body {
 	font-family: 'Open Sans', Verdana, Tahoma;
-    background-color: white;
+    background-color: #F5F5F5;
+}
+
+header {
+/*    background-color: #C1D2E8;
+    height: 50px;*/
+
+}
+
+img {
+    margin-left: 470px;
 }
 
 h1 {
+    color: #49A3A3;
+    font-family: Nexa Light;
+    font-size: 140px;
+    text-align: center;
+
+}
+
+h2 {
+    color: #ED694C;
+    font-family: carton;
+    margin-top: 70px;
     text-align: center;
 }
 
 form {
+    color: #49A3A3;
+    font-family: Nexa Bold;
     width: 350px;
     text-align: center;
     margin: auto;
+    padding-top: 100px;
 }
 
 input {
@@ -26,4 +50,8 @@ input {
 
 input[type="submit"] {
     margin-top: 20px;
+}
+
+.result {
+    text-align: center;
 }
