@@ -4,8 +4,6 @@ require 'pry'
 require 'lyricfy'
 
 module Ipsum
-  attr_reader :no_song
-
 
   class Song
     RICKROLL_LINES = ["Oooh",

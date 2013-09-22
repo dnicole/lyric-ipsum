@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader'
-require_relative 'lib/make-ipsum.rb'
+require_relative 'lib/make_ipsum.rb'
 
 get '/' do
   "Hello World"
