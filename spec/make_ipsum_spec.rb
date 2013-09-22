@@ -32,12 +32,16 @@ describe Ipsum::Song do
         expect(song.no_song).to eq(true)
       end
     end
-
-    # context 'when song does not exist as entered' do 
-    #   it 'returns error text and a rickroll' do
-    #     expect().to be_a()
-    #   end
-    # end
   end
-  
+
+  describe '#add_latin' do
+    it 'adds lorem text from LATIN to match song lyrics' do
+      song = double("song")
+      song.stub(:lines).and_return(['lyrics'])
+      Lyricfy::Fetcher.stub_chain(:new, :search).and_return(song)
+
+      expect(song.add_latin)
+
+    end
+  end
 end 
