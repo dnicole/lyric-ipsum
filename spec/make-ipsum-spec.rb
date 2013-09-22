@@ -7,9 +7,17 @@ require_relative '../lib/make-ipsum.rb'
 describe Ipsum::Song do 
 
   describe '#initialize' do
-    it 'returns the song the user asks for from the Lyricfy API' do
-      expect(self).to be_a(Lyricfy::Fetcher)
+    context 'when song exists as entered' do 
+      it 'fetches the song the user requests from the Lyricfy API' do
+        expect(@new_song).to be_a(Lyricfy::Fetcher::fetcher.search)
+      end
     end
+
+    # context 'when song does not exist as entered' do 
+    #   it 'returns error text and a rickroll' do
+    #     expect().to be_a()
+    #   end
+    # end
   end
   
 end 
