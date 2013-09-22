@@ -11,8 +11,7 @@ get '/' do
 end
 
 post '/result' do
-  @result = Ipsum::Song.new(params[:artist], params[:song])
-
+  @result = Ipsum::Song.new(params[:artist], params[:song]).lyrics
 
   erb :result
 end

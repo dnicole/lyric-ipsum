@@ -8,21 +8,20 @@ module Ipsum
   class Song
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
-      new_song = fetcher.search(artist, song)
-      new_song.lines.sample(2)
+      @new_song = fetcher.search(artist, song)
     end
 
     # def lines
     #   self["lines"]
     # end
 
-    def lyrics()
-  
+    def lyrics
+      @new_song.lines.sample(2)
     end
   end
 
-  # class 
-  # end 
+  # class
+  # end
 end
 
 # fetcher = Lyricfy::Fetcher.new
