@@ -4,6 +4,7 @@ require 'pry'
 require 'lyricfy'
 
 module Ipsum
+  attr_reader :no_song
 
   class Song
     def initialize(artist, song)
@@ -15,19 +16,12 @@ module Ipsum
       end
     end
 
-    # def lines
-    #   self["lines"]
-    # end
+    def no_song?
+      @no_song
+    end
 
     def lyrics
       @new_song.lines.sample(rand(10..15)).join(". ")
     end
   end
-
-  # class
-  # end
 end
-
-# fetcher = Lyricfy::Fetcher.new
-# song = fetcher.search 'Artist', 'Song'
-# puts song.body # prints lyrics separated by '\n'
