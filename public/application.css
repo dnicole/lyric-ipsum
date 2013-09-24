@@ -68,3 +68,12 @@ input[type="submit"] {
   font-weight: bold;
   text-align: center;
 }
+
+.github-btn {
+  display: block;
+  margin: 15px auto 40px;
+}
+
+.twitter-btn-group {
+  text-align: center;
+}
