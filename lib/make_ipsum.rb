@@ -22,9 +22,30 @@ module Ipsum
       "Never gonna say goodbye",
       "Never gonna tell a lie and hurt you"]
 
-    LATIN = ["Lorem ipsum dolor sit amet", "consectetur adipiscing elit.", "Aliquam volutpat urna turpis.", "fringilla elementum mauris venenatis ac.", "Sed ac massa fringilla", "porttitor augue eget", "pulvinar augue.", "Mauris felis ligula,", "adipiscing in tellus vel,", "condimentum tempus lacus.", "Nullam id est nec mauris", "sollicitudin molestie eu a tortor.", "Sed egestas pretium nibh,", "at vulputate lectus consequat in.", "Integer adipiscing,", "lectus ut tincidunt accumsan,", "lorem odio ultrices elit,", "condimentum sollicitudin", "odio orci eu eros.", "In iaculis lorem eu mollis accumsan.", "Nullam at molestie dui.", "Donec commodo metus sed turpis", "convallis pellentesque.", "Aliquam ac ullamcorper libero."]  
+    LATIN = ["Lorem ipsum dolor sit amet", 
+      "consectetur adipiscing elit.", 
+      "Aliquam volutpat urna turpis.", 
+      "fringilla elementum mauris venenatis ac.", 
+      "Sed ac massa fringilla", "porttitor augue eget", 
+      "pulvinar augue.", "Mauris felis ligula,", 
+      "adipiscing in tellus vel,", 
+      "condimentum tempus lacus.", 
+      "Nullam id est nec mauris", 
+      "sollicitudin molestie eu a tortor.", 
+      "Sed egestas pretium nibh,", 
+      "at vulputate lectus consequat in.",  
+      "Integer adipiscing,", 
+      "lectus ut tincidunt accumsan,", 
+      "lorem odio ultrices elit,", 
+      "condimentum sollicitudin", 
+      "odio orci eu eros.", 
+      "In iaculis lorem eu mollis accumsan.", 
+      "Nullam at molestie dui.", 
+      "Donec commodo metus sed turpis", 
+      "convallis pellentesque.", 
+      "Aliquam ac ullamcorper libero."]  
 
-    attr_reader :title, :author, :lines, :no_song
+    attr_reader :title, :author, :lines, :no_song 
 
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
