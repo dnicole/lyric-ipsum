@@ -52,6 +52,11 @@ input {
   font-size: 1em;
 }
 
+input[type="radio"] {
+  display: inline;
+  width: 1em;
+}
+
 input[type="submit"] {
   margin-top: 20px;
 }
