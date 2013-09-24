@@ -1,72 +1,65 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    background: url(stitched_wool.png);
-}
-	font-family: 'Open Sans', Verdana, Tahoma;
-    background-color: #F5F5F5;
-}
-
-header {
-/*    background-color: #C1D2E8;
-    height: 50px;*/
-
+  background: url(stitched_wool.png);
 }
 
 img {
-    display: block;
-    margin: auto;
-    text-align: center;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-    color: #49A3A3;
-    font-family: Nexa Light;
-    font-size: 140px;
-    text-align: center;
+  color: #49A3A3;
+  font-family: Nexa Light;
+  font-size: 140px;
+  text-align: center;
 
 }
 
 h2 {
-    color: #ED694C;
-    font-family: carton;
-    margin-top: 70px;
-    text-align: center;
+  color: #ED694C;
+  font-family: carton;
+  margin-top: 70px;
+  text-align: center;
 }
 
 h4 {
-    color: #ED694C;
-    font-family: carton;
+  color: #ED694C;
+  font-family: carton;
 }
 
 form {
-    color: #49A3A3;
-    font-family: Nexa Bold;
-    width: 350px;
-    text-align: center;
-    margin: auto;
-    padding-top: 100px;
+  color: #49A3A3;
+  font-family: Nexa Bold;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+  padding-top: 100px;
 }
 
 input {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 5px;
-    font-size: 1em;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 5px;
+  font-size: 1em;
 }
 
 input[type="submit"] {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .result {
-    font-family: Avenir;
-    font-weight: bold;
-    text-align: center;
+  margin: auto;
+  max-width: 700px;
+  font-family: Avenir;
+  font-weight: bold;
+  text-align: center;
 }
