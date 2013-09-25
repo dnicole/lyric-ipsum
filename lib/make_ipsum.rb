@@ -8,8 +8,7 @@ module Ipsum
 
 
   class Song
-    RICKROLL_LINES = ["Oooh",
-      "We're no strangers to love",
+    RICKROLL_LINES = ["We're no strangers to love",
       "You know the rules and so do I",
       "A full commitment's what I'm thinking of",
       "You wouldn't get this from any other guy",
@@ -22,30 +21,31 @@ module Ipsum
       "Never gonna say goodbye",
       "Never gonna tell a lie and hurt you"]
 
-    LATIN = ["Lorem ipsum dolor sit amet", 
-      "consectetur adipiscing elit.", 
-      "Aliquam volutpat urna turpis.", 
-      "fringilla elementum mauris venenatis ac.", 
-      "Sed ac massa fringilla", "porttitor augue eget", 
-      "pulvinar augue.", "Mauris felis ligula,", 
-      "adipiscing in tellus vel,", 
-      "condimentum tempus lacus.", 
-      "Nullam id est nec mauris", 
-      "sollicitudin molestie eu a tortor.", 
-      "Sed egestas pretium nibh,", 
-      "at vulputate lectus consequat in.",  
-      "Integer adipiscing,", 
-      "lectus ut tincidunt accumsan,", 
-      "lorem odio ultrices elit,", 
-      "condimentum sollicitudin", 
-      "odio orci eu eros.", 
-      "In iaculis lorem eu mollis accumsan.", 
-      "Nullam at molestie dui.", 
-      "Donec commodo metus sed turpis", 
-      "convallis pellentesque.", 
-      "Aliquam ac ullamcorper libero."]  
+    LATIN = ["consectetur adipiscing elit",
+      "Aliquam volutpat urna turpis",
+      "fringilla elementum mauris venenatis ac",
+      "Sed ac massa fringilla",
+      "porttitor augue eget",
+      "pulvinar augue",
+      "Mauris felis ligula",
+      "adipiscing in tellus vel",
+      "condimentum tempus lacus",
+      "Nullam id est nec mauris",
+      "sollicitudin molestie eu a tortor",
+      "Sed egestas pretium nibh",
+      "at vulputate lectus consequat in",
+      "Integer adipiscing",
+      "lectus ut tincidunt accumsan",
+      "lorem odio ultrices elit",
+      "condimentum sollicitudin",
+      "odio orci eu eros",
+      "In iaculis lorem eu mollis accumsan",
+      "Nullam at molestie dui",
+      "Donec commodo metus sed turpis",
+      "convallis pellentesque",
+      "Aliquam ac ullamcorper libero"]
 
-    attr_reader :title, :author, :lines, :no_song 
+    attr_reader :title, :author, :lines, :no_song
 
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
@@ -63,11 +63,22 @@ module Ipsum
     end
 
     def random_lines
-      @lines.sample(rand(10..15)).join(". ")
+      number_of_lines = rand(10..15)
+      song_lines = @lines.sample(number_of_lines)
+      song_lines.join(". ")
     end
 
     def latin_add
-      @lines.sample(rand(10..15)).zip(LATIN).flatten.compact.join(". ")
+      number_of_lines = rand(10..15)
+      song_lines = @lines.sample(number_of_lines)
+      if true
+        rand(6..12).times do
+          latin_line = LATIN.sample
+          song_lines.insert(rand(number_of_lines), latin_line)
+          number_of_lines += 1
+        end
+      end
+      song_lines.join(". ")
     end
   end
 end
