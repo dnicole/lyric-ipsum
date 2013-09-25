@@ -21,29 +21,39 @@ module Ipsum
       "Never gonna say goodbye",
       "Never gonna tell a lie and hurt you"]
 
-    LATIN = ["consectetur adipiscing elit",
+    LATIN = ["Consectetur adipiscing elit",
       "Aliquam volutpat urna turpis",
-      "fringilla elementum mauris venenatis ac",
+      "Fringilla elementum mauris venenatis ac",
       "Sed ac massa fringilla",
-      "porttitor augue eget",
-      "pulvinar augue",
+      "Porttitor augue eget",
+      "Pulvinar augue",
       "Mauris felis ligula",
-      "adipiscing in tellus vel",
-      "condimentum tempus lacus",
+      "Adipiscing in tellus vel",
+      "Condimentum tempus lacus",
       "Nullam id est nec mauris",
-      "sollicitudin molestie eu a tortor",
+      "Sollicitudin molestie eu a tortor",
       "Sed egestas pretium nibh",
-      "at vulputate lectus consequat in",
+      "At vulputate lectus consequat in",
       "Integer adipiscing",
-      "lectus ut tincidunt accumsan",
-      "lorem odio ultrices elit",
-      "condimentum sollicitudin",
-      "odio orci eu eros",
+      "Lectus ut tincidunt accumsan",
+      "Lorem odio ultrices elit",
+      "Condimentum sollicitudin",
+      "Odio orci eu eros",
       "In iaculis lorem eu mollis accumsan",
       "Nullam at molestie dui",
       "Donec commodo metus sed turpis",
-      "convallis pellentesque",
-      "Aliquam ac ullamcorper libero"]
+      "Convallis pellentesque",
+      "Aliquam ac ullamcorper libero",
+      "Ut gravida leo at tellus mollis aliquet",
+      "In vitae purus sagittis lectus",
+      "Convallis fringilla ac id dolor",
+      "Nulla facilisi",
+      "In aliquet accumsan nunc",
+      "At vulputate lectus pharetra luctus",
+      "Sed faucibus molestie magna",
+      "Et blandit turpis sagittis ut",
+      "Quisque dictum bibendum orci",
+      "At sodales diam suscipit vel"]
 
     attr_reader :title, :author, :lines, :no_song
 
@@ -62,22 +72,18 @@ module Ipsum
       @no_song
     end
 
-    def random_lines
+    def random_lines(latin)
       number_of_lines = rand(10..15)
       song_lines = @lines.sample(number_of_lines)
-      song_lines.join(". ")
-    end
 
-    def latin_add
-      number_of_lines = rand(10..15)
-      song_lines = @lines.sample(number_of_lines)
-      if true
+      if latin
         rand(6..12).times do
           latin_line = LATIN.sample
           song_lines.insert(rand(number_of_lines), latin_line)
           number_of_lines += 1
         end
       end
+
       song_lines.join(". ")
     end
   end
