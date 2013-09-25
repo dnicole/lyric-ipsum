@@ -1,21 +1,23 @@
 <!doctype html>
 <html>
 <head>
-    <title>Bummer</title>
+    <title>voilà</title>
     <link rel="stylesheet" href="application.css" type="text/css">
 </head>
 
 <body>
-    <a href="/"><h1>Bummer!</h1></a>
-
     <div class="result">
     	<% if @no_song %>
-			  <h4 class="error">We're not as cool as you; we don't know that song. Or maybe you just can't spell. Anyway, here's some ipsum text:</h4>
-			<% end %>
+        <a href="/"><h1>Bummer!</h1></a>
+  			  <h4 class="error">We're not as cool as you; we don't know that song. Or maybe you just can't spell. Anyway, here's some ipsum text:</h4>
+
+         <iframe width="420" height="315" src="//www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allowfullscreen></iframe>
+
+      <% else @result %>
+        <a href="/"><h1>voilà</h1></a>
+		  <% end %>
+
       <p><%= @result %>.</p>
-
-      <iframe width="420" height="315" src="//www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allowfullscreen></iframe>
-
     </div>
 
     <h2>we make internets, and so do you.</h2>
