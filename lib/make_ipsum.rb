@@ -53,7 +53,7 @@ module Ipsum
       "Sed faucibus molestie magna",
       "Et blandit turpis sagittis ut",
       "Quisque dictum bibendum orci",
-      "At sodales diam suscipit vel"
+      "At sodales diam suscipit vel",
       "Interdum et malesuada fames", 
       "ac ante ipsum primis in faucibus", 
       "Sed justo nisi", 
@@ -77,7 +77,7 @@ module Ipsum
       "Mauris tempus sagittis metus", 
       "porttitor viverra odio tristique ac", 
       "Fusce pulvinar elit orci", 
-      "ut tincidunt leo pulvinar eget"
+      "ut tincidunt leo pulvinar eget",
       "Fusce condimentum neque et", 
       "odio condimentum aliquam", 
       "Aenean volutpat ipsum eu", 
