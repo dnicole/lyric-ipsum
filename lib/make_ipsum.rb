@@ -5,8 +5,8 @@ require 'lyricfy'
 require 'gracenote'
 
 module Ipsum
-  attr_reader :no_song
 
+  attr_reader :no_song, :searcher
 
   class Song
     RICKROLL_LINES = ["We're no strangers to love",
@@ -100,6 +100,8 @@ module Ipsum
 
       if song = fetcher.search(artist, song)
         @lines = song.lines
+      elsif 
+        @searcher.search_gracenote
       else
         @lines = RICKROLL_LINES
         @no_song = true
@@ -124,5 +126,14 @@ module Ipsum
 
       song_lines.join(". ")
     end
+
+    def search_gracenote(artist)
+      spec = {:clientID => "15732736-D6D55495C2F42833A48C776AE77E90F0", :clientTag => "D6D55495C2F42833A48C776AE77E90F0"}
+      obj = Gracenote.new(spec)
+      obj.registerUser
+
+      @searcher = findArtist(artist, matchMode=@@BEST_MATCH_ONLY)
+    end
+
   end
 end
