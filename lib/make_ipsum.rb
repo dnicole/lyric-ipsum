@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'pry'
 require 'lyricfy'
+require 'gracenote'
 
 module Ipsum
   attr_reader :no_song
