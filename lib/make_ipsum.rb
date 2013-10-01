@@ -56,7 +56,7 @@ module Ipsum
       "At sodales diam suscipit vel"]
 
     attr_reader :title, :author, :lines, :no_song
-
+    
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
 
