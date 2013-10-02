@@ -8,6 +8,9 @@ module Ipsum
 
 
   class Song
+
+    # Instead of an extra database call, here is an array
+    # with the lyrics to "Never Gonna Give You Up"
     RICKROLL_LINES = ["We're no strangers to love",
       "You know the rules and so do I",
       "A full commitment's what I'm thinking of",
@@ -21,6 +24,8 @@ module Ipsum
       "Never gonna say goodbye",
       "Never gonna tell a lie and hurt you"]
 
+    # Instead of connecting another API and making an extraneous database 
+    # call, here is an array full of Latin nonsense.  
     LATIN = ["Consectetur adipiscing elit",
       "Aliquam volutpat urna turpis",
       "Fringilla elementum mauris venenatis ac",
@@ -96,6 +101,12 @@ module Ipsum
 
     attr_reader :title, :author, :lines, :no_song
     
+    # Creates a new Fetcher object
+    #
+    # Fetcher will search the MetroLyrics and Lyric Wiki databases
+    # 
+    # return either RICKROLL_LINES or .lines (as defined by the 
+    # Lyricfy gem) of the requested song.
     def initialize(artist, song)
       fetcher = Lyricfy::Fetcher.new
 
@@ -111,6 +122,14 @@ module Ipsum
       @no_song
     end
 
+    # Randomizes the song by line.
+    #
+    # A random number of lines between 10 and 15 are taken out of
+    # the song and put into an array. If Latin is passed in then 
+    # between 6 and 12 lines of Latin are also randomly passed in.
+    # The array is joined together by periods at the end.
+    #
+    # Returns a string of mixed lyrics and optional Latin.
     def random_lines(latin)
       number_of_lines = rand(10..15)
       song_lines = @lines.sample(number_of_lines)
